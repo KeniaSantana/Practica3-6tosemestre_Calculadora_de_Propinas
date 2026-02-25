@@ -5,19 +5,17 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
-    # Campo monto
+
     txt_monto = ft.TextField(
         label="Monto de la cuenta",
         width=300,
         keyboard_type=ft.KeyboardType.NUMBER
     )
 
-    # Textos de resultados
     txt_porcentaje = ft.Text("Propina: 5%")
     txt_propina = ft.Text("Propina calculada: $0.00")
     txt_total = ft.Text("Total a pagar: $0.00", size=20, weight="bold")
 
-    # Función que calcula
     def calcular(e):
         try:
             monto = float(txt_monto.value)
@@ -34,7 +32,7 @@ def main(page: ft.Page):
 
         page.update()
 
-    # Slider
+
     slider = ft.Slider(
         min=5,
         max=25,
