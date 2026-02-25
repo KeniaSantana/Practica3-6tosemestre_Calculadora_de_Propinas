@@ -38,7 +38,7 @@ def main(page: ft.Page):
     slider = ft.Slider(
         min=5,
         max=25,
-        divisions=7,   # 8 posiciones
+        divisions=7,   
         value=5,
         label="{value}%",
         on_change=calcular,
